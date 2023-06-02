@@ -24,6 +24,8 @@ ZSH_THEME="robbyrussell"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+source ~/.zsh_aliases
+
 plugins=(
 	git
 	zsh-autosuggestions
