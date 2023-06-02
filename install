@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+# Get the current directory
+current_dir=$(pwd)
+
+# Loop through all subdirectories in the current directory
+for directory in */; do
+  # Remove the trailing slash from the directory name
+  directory_name=${directory%/}
+
+  # Run stow on each directory
+  stow "$directory_name"
+done
