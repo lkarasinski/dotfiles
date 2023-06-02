@@ -17,3 +17,16 @@ You can also `chmod +x` the file
 # This will allow you install the dotfiles using `./install` instead of zsh `./install`
 chmod +x ./install
 ```
+
+# Configs
+
+## neovim
+My neovim config is still in development (at work i use astronvim).
+
+### Roadmap
+- [ ] neo-tree
+
+## zsh
+I use `oh-my-zsh` with some additional plugins like:
+- `zsh-autosuggestions`
+- `zsh-syntax-highlighting` (not yet added)
