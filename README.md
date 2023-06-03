@@ -6,6 +6,7 @@ To use my dotfiles make sure that you:
 - Have zsh to execute the install script
 - Have stow to create symlinks
 - Have [lazygit](https://github.com/jesseduffield/lazygit) installed
+- Have [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) installed
 
 ## Usage
 Run `install` script using zsh

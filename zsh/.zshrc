@@ -25,10 +25,12 @@ ZSH_THEME="robbyrussell"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 source ~/.zsh_aliases
+source ~/.config/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 plugins=(
 	git
 	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
