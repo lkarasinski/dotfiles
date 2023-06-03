@@ -5,5 +5,9 @@ map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
+-- Buffers
+map('n', 'H', ':bprev<CR>')
+map('n', 'L', ':bnext<CR>')
+
 -- Plugins
 map('n', '<leader>gg', ':LazyGit<CR>')
