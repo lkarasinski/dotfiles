@@ -11,3 +11,6 @@ map('n', 'L', ':bnext<CR>')
 
 -- Plugins
 map('n', '<leader>gg', ':LazyGit<CR>')
+
+map('', '<C-d>', '<C-d>zz', { noremap = true })
+map('', '<C-u>', '<C-u>zz', { noremap = true })
