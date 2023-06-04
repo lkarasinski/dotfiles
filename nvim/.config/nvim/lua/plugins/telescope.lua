@@ -1,7 +1,11 @@
 return {
 	'nvim-telescope/telescope.nvim',
 	tag = '0.1.1',
-	dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-ui-select.nvim' },
+	dependencies = {
+		'nvim-lua/plenary.nvim',
+		'nvim-telescope/telescope-ui-select.nvim',
+		"debugloop/telescope-undo.nvim",
+	},
 	config = function()
 		local map = require('utils').map
 		local builtin = require('telescope.builtin')
@@ -15,10 +19,17 @@ return {
 						["<esc>"] = actions.close
 					},
 				},
-			}
+			},
+			extensions = {
+				undo = {},
+			},
 		}
 
 		telescope.load_extension('ui-select')
+		telescope.load_extension("undo")
+
+		-- Map <leader> u to Telescope undo-tree
+		map('n', '<leader>u', '<cmd>Telescope undo<cr>')
 
 
 		-- Map <leader>ff to Telescope's find_files
