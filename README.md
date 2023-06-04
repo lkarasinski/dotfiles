@@ -15,22 +15,25 @@ Run `install` script using zsh
 zsh ./install
 ```
 
-You can also `chmod +x` the file
-This will allow you install the dotfiles using `./install` instead of zsh `./install`
-```zsh
-chmod +x ./install
-```
-
 # Configs
 
 ## neovim
-My neovim config is still in development (at work i use astronvim).
+My neovim config was recently created and is still in the "testing" phase.
+The plugins might change, as well as keymaps and all the other stuff.
+So far i find the config good enough to use, and I'm using it at work.
 
-### Roadmap
-- [x] lazygit
-- [ ] neo-tree
+
+### Features
+- Autoformatting using lsp-config
+- Buffer management using bufferline and bdelete
+- Comment tool with support for tree-sitter
+- Lazygit git gui
+- neo-tree file tree
+- File and word fuzzy finding with telescope 
+- Undotree and persistent undos
+- Easy lsp installation with Mason
 
 ## zsh
 I use `oh-my-zsh` with some additional plugins like:
 - `zsh-autosuggestions`
-- `zsh-syntax-highlighting` (not yet added)
+- `zsh-syntax-highlighting`
