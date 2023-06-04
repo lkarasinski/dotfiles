@@ -1,0 +1,19 @@
+import:
+  - ~/.config/alacritty/catppuccin-mocha.yml
+window:
+  dimensions:
+    columns: 180
+    lines: 55
+  decorations: full
+font:
+  size: 12
+  normal:
+    family: FiraCode Nerd Font Mono
+key_bindings:
+  - { key: F11, action: ToggleFullscreen }
+shell:
+  program: /usr/bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
