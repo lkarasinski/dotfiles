@@ -7,6 +7,7 @@ To use my dotfiles make sure that you:
 - Have stow to create symlinks
 - Have [lazygit](https://github.com/jesseduffield/lazygit) installed
 - Have [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) installed
+- Have [ripgrep](https://github.com/BurntSushi/ripgrep) installed
 
 ## Usage
 Run `install` script using zsh
