@@ -35,3 +35,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+
+# fnm
+export PATH="/home/lkarasinski/.local/share/fnm:$PATH"
+eval "`fnm env`"
