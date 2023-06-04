@@ -4,6 +4,8 @@ vim.opt.scrolloff = 8
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
+vim.o.clipboard = "unnamedplus"
+
 
 -- Create the undo directory if it doesn't exist
 vim.fn.mkdir(vim.fn.expand(os.getenv("HOME") .. "/.nvim/undo"), "p")
