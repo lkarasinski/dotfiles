@@ -8,12 +8,14 @@ To use my dotfiles make sure that you:
 - Have [lazygit](https://github.com/jesseduffield/lazygit) installed
 - Have [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) installed
 - Have [ripgrep](https://github.com/BurntSushi/ripgrep) installed
+- Have [tpm](https://github.com/tmux-plugins/tpm) in `~/.tmux-plugins/` (`git clone https://github.com/tmux-plugins/tpm ~/.tmux-plugins/tpm`)
 
 ## Usage
 Run `install` script using zsh
 ```zsh
 zsh ./install
 ```
+Install tmux plugins with `C-a` + `I`
 
 # Configs
 
