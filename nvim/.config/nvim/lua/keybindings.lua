@@ -19,14 +19,14 @@ map('', '<C-u>', '<C-u>zz', { noremap = true })
 -- LSP --
 ---------
 
--- Go to definition
-map('n', 'gd', function()
-	vim.lsp.buf.definition()
+-- Hover diagnostics
+map('n', 'K', function()
+	vim.lsp.buf.hover()
 end)
 
 -- Go to definition
-map('n', '<leader>K', function()
-	vim.lsp.buf.hover()
+map('n', 'gd', function()
+	vim.lsp.buf.definition()
 end)
 
 -- Rename symbol
