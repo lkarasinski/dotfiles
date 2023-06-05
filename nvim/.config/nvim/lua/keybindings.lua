@@ -35,7 +35,7 @@ map('', '<F2>', function()
 end, { noremap = true, silent = true })
 
 -- Code actions
-map('', '<C-Space>', function()
+map('', '<leader>la', function()
 	vim.lsp.buf.code_action()
 end, { noremap = true, silent = true })
 
