@@ -35,7 +35,11 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+export PATH="/home/lkarasinski/.local/bin:$PATH"
 
 # fnm
 export PATH="/home/lkarasinski/.local/share/fnm:$PATH"
 eval "`fnm env`"
+
+# zoxide
+eval "$(zoxide init zsh)"
