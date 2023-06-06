@@ -43,3 +43,11 @@ eval "`fnm env`"
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# pnpm
+export PNPM_HOME="/home/lkarasinski/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
