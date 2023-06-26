@@ -1,0 +1,17 @@
+(defpoll time :interval "1s"
+  "date '+%H:%M:%S %b %d, %Y'")
+
+(defwindow statusbar
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "5px"
+                               :width "2540px"
+                               :height "40px"
+                               :anchor "top center")
+           :stacking "fg"
+           :reserve (struts :distance "40px" :side "top")
+           :windowtype "dock"
+           :exclusive true
+           :wm-ignore false
+  "${time}")
+
