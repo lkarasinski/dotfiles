@@ -65,3 +65,10 @@ end)
 
 map('n', '<leader>o', ':Neotree toggle<CR>')
 map('n', '<leader>e', ':Neotree focus<CR>')
+
+
+---------------
+-- Telescope --
+---------------
+
+map('n', '<leader>fr', ':Telescope resume<CR>')
