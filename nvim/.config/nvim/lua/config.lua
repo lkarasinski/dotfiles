@@ -5,6 +5,7 @@ vim.opt.scrolloff = 8
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
+vim.wo.wrap = false
 vim.o.clipboard = "unnamedplus"
 
 
