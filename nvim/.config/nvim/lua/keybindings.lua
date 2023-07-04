@@ -72,3 +72,9 @@ map('n', '<leader>e', ':Neotree focus<CR>')
 ---------------
 
 map('n', '<leader>fr', ':Telescope resume<CR>')
+
+-----------
+-- Neorg --
+-----------
+
+map('n', '<leader>fn', ':Neorg<CR>')
