@@ -1,4 +1,17 @@
 local map = require('utils').map
+local wk = require('which-key')
+
+------------
+-- Groups --
+------------
+
+wk.register({
+	["<leader>f"] = { name = "File" },
+	["<leader>l"] = { name = "LSP" },
+	["<leader>n"] = { name = "Notes" },
+})
+
+--
 
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
@@ -22,59 +35,67 @@ map('', '<C-u>', '<C-u>zz', { noremap = true })
 -- Hover diagnostics
 map('n', 'K', function()
 	vim.lsp.buf.hover()
-end)
+end, { desc = "Hover diagnostics" })
 
 -- Go to definition
 map('n', 'gd', function()
 	vim.lsp.buf.definition()
-end)
+end, { desc = "Go to definition" })
 
 -- Rename symbol
-map('', '<F2>', function()
+map('', 'lr', function()
 	vim.lsp.buf.rename()
-end, { noremap = true, silent = true })
+end, { desc = "Rename symbol", noremap = true, silent = true })
 
 -- Code actions
 map('', '<leader>la', function()
 	vim.lsp.buf.code_action()
-end, { noremap = true, silent = true })
+end, { desc = "Code actions", noremap = true, silent = true })
 
 -- Next diagnostic
-map('', '<leader>gn', function()
+map('', '<leader>ln', function()
 	vim.diagnostic.goto_next()
-end, { noremap = true, silent = true })
+end, { desc = "Next diagnostic", noremap = true, silent = true })
 
 -- Previous diagnostic
-map('', '<leader>gp', function()
+map('', '<leader>lp', function()
 	vim.diagnostic.goto_prev()
-end, { noremap = true, silent = true })
+end, { desc = "Previous diagnostic", noremap = true, silent = true })
 
 -- Show line diagnostic
-map('n', '<leader>gl', function()
+map('n', '<leader>ld', function()
 	vim.diagnostic.open_float()
-end)
+end, { desc = "Line diagnostic" })
 
--- Format document
-map('n', '<leader>fmt', function()
-	vim.lsp.buf.formatting()
-end)
+---------------
+-- bufdelete --
+---------------
+
+local bufdelete = require('bufdelete')
+
+map('n', '<leader>c', function()
+	bufdelete.bufdelete(0)
+end, { desc = "Close buffer" })
 
 --------------
 -- neo-tree --
 --------------
 
-map('n', '<leader>o', ':Neotree toggle<CR>')
-map('n', '<leader>e', ':Neotree focus<CR>')
+map('n', '<leader>o', ':Neotree toggle<CR>', { desc = "Toggle file explorer" })
+map('n', '<leader>e', ':Neotree focus<CR>', { desc = "Focus file explorer" })
 
 
 ---------------
 -- Telescope --
 ---------------
 
-map('n', '<leader>fr', ':Telescope resume<CR>')
+map('n', '<leader>fr', ':Telescope resume<CR>', { desc = "Resume search" })
+map('n', '<leader>ff', ':Telescope find_files<CR>', { desc = "Find files" })
+map('n', '<leader>u', '<cmd>Telescope undo<cr>', { desc = "Undo Tree" })
+map('n', '<leader>fw', ':Telescope live_grep<CR>', { desc = "Find word" })
 
 -----------
 -- Neorg --
 -----------
 
-map('n', '<leader>fn', ':Neorg<CR>')
+map('n', '<leader>nn', ':Neorg<CR>')
