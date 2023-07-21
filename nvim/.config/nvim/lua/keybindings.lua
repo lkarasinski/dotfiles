@@ -18,6 +18,9 @@ map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
+map('n', '<F1>', '<Nop>', { silent = true})
+map('i', '<F1>', '<Nop>', { silent = true})
+map('x', '<F1>', '<Nop>', { silent = true})
 
 -- Buffers
 map('n', 'H', ':bprev<CR>')
@@ -42,7 +45,7 @@ map('n', 'gd', function()
 end, { desc = "Go to definition" })
 
 -- Rename symbol
-map('', 'lr', function()
+map('', '<leader>lr', function()
 	vim.lsp.buf.rename()
 end, { desc = "Rename symbol", noremap = true, silent = true })
 
@@ -92,6 +95,7 @@ map('n', '<leader>fr', ':Telescope resume<CR>', { desc = "Resume search" })
 map('n', '<leader>ff', ':Telescope find_files<CR>', { desc = "Find files" })
 map('n', '<leader>u', '<cmd>Telescope undo<cr>', { desc = "Undo Tree" })
 map('n', '<leader>fw', ':Telescope live_grep<CR>', { desc = "Find word" })
+map('n', '<leader>fb', ':Telescope buffers<CR>', { desc = "Find buffers" })
 
 -----------
 -- Neorg --
