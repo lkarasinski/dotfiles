@@ -9,6 +9,7 @@ wk.register({
 	["<leader>f"] = { name = "File" },
 	["<leader>l"] = { name = "LSP" },
 	["<leader>n"] = { name = "Notes" },
+	["<leader>g"] = { name = "Git" },
 })
 
 --
@@ -22,8 +23,6 @@ map('n', '<C-l>', '<C-w>l')
 map('n', 'H', ':bprev<CR>')
 map('n', 'L', ':bnext<CR>')
 
--- Plugins
-map('n', '<leader>gg', ':LazyGit<CR>')
 
 map('', '<C-d>', '<C-d>zz', { noremap = true })
 map('', '<C-u>', '<C-u>zz', { noremap = true })
@@ -99,3 +98,15 @@ map('n', '<leader>fw', ':Telescope live_grep<CR>', { desc = "Find word" })
 -----------
 
 map('n', '<leader>nn', ':Neorg<CR>')
+
+---------
+-- git --
+---------
+
+map('n', '<leader>gg', ':LazyGit<CR>')
+map('n', '<leader>gr', ':lua require("gitsigns").reset_hunk()<CR>', { desc = "Reset hunk" })
+map('n', '<leader>gp', ':lua require("gitsigns").preview_hunk()<CR>', { desc = "Preview hunk" })
+map('n', '<leader>gs', ':lua require("gitsigns").stage_hunk()<CR>', { desc = "Stage hunk" })
+map('n', '<leader>gb', ':lua require("gitsigns").toggle_current_line_blame()<CR>', { desc = "Toggle current line blame" })
+map('n', '<leader>gj', ':lua require("gitsigns").next_hunk()<CR>', { desc = "Go to next hunk" })
+map('n', '<leader>gk', ':lua require("gitsigns").prev_hunk()<CR>', { desc = "Go to previous hunk" })
