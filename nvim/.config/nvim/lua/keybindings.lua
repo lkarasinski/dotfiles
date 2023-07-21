@@ -9,6 +9,7 @@ wk.register({
 	["<leader>f"] = { name = "File" },
 	["<leader>l"] = { name = "LSP" },
 	["<leader>n"] = { name = "Notes" },
+	["<leader>h"] = { name = "Harpoon" },
 	["<leader>g"] = { name = "Git" },
 })
 
@@ -102,6 +103,15 @@ map('n', '<leader>fb', ':Telescope buffers<CR>', { desc = "Find buffers" })
 -----------
 
 map('n', '<leader>nn', ':Neorg<CR>')
+
+-------------
+-- harpoon --
+-------------
+
+map('n', '<leader>ha', ':lua require("harpoon.mark").add_file()<CR>', { desc = "Add file to harpoon" })
+map('n', '<leader>hf', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', { desc = "Toggle quick menu" })
+map('n', '<leader>hl', ':lua require("harpoon.ui").nav_next()<CR>', { desc = "Go to next mark" })
+map('n', '<leader>hh', ':lua require("harpoon.ui").nav_prev()<CR>', { desc = "Go to previous mark" })
 
 ---------
 -- git --
