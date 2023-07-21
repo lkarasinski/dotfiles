@@ -124,3 +124,9 @@ map('n', '<leader>gs', ':lua require("gitsigns").stage_hunk()<CR>', { desc = "St
 map('n', '<leader>gb', ':lua require("gitsigns").toggle_current_line_blame()<CR>', { desc = "Toggle current line blame" })
 map('n', '<leader>gj', ':lua require("gitsigns").next_hunk()<CR>', { desc = "Go to next hunk" })
 map('n', '<leader>gk', ':lua require("gitsigns").prev_hunk()<CR>', { desc = "Go to previous hunk" })
+
+--------------
+-- Navbuddy --
+--------------
+
+map('n', '<C-n>', ":Navbuddy<CR>", { desc = "Open symbol navigation" })

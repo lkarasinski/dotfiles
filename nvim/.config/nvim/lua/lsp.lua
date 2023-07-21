@@ -26,14 +26,27 @@ mason_lspconfig.setup {
 
 }
 
-local on_attach = function(_, bufnr)
-	-- Create a command `:Format` local to the LSP buffer
-	vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
-		vim.lsp.buf.format()
-	end, { desc = 'Format current buffer with LSP' })
+local navbuddy = require("nvim-navbuddy");
+
+-- Function that create on_attach functions, with different features based on the server_name
+local create_on_attach = function(server_name)
+	if (server_name == "tsserver") then
+		return function(client, bufnr)
+			navbuddy.attach(client, bufnr)
+			-- Create a command `:Format` local to the LSP buffer
+			vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
+				vim.lsp.buf.format()
+			end, { desc = 'Format current buffer with LSP' })
+		end
+	end
+
+	return function(_, bufnr)
+		-- Create a command `:Format` local to the LSP buffer
+		vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
+			vim.lsp.buf.format()
+		end, { desc = 'Format current buffer with LSP' })
+	end
 end
-
-
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -43,7 +56,7 @@ mason_lspconfig.setup_handlers {
 	function(server_name)
 		require('lspconfig')[server_name].setup {
 			capabilities = capabilities,
-			on_attach = on_attach,
+			on_attach = create_on_attach(server_name),
 			settings = servers[server_name],
 		}
 	end,

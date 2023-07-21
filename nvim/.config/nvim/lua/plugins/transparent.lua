@@ -5,7 +5,7 @@ return {
 			local transparent = require("transparent")
 			transparent.setup({
 				extra_groups = { "NeoTreeNormal", "NeoTreeActive", "NeoTreeInactive",
-					"NeoTreeNormalNC" },
+					"NeoTreeNormalNC", "NavbuddyNormalFloat" },
 			})
 		end,
 	},
