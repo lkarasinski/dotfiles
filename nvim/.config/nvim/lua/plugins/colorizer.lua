@@ -3,10 +3,10 @@ return {
 	config = function()
 		local colorizer = require('colorizer')
 		colorizer.setup({
-		'javascript',
-		'javascriptreact',
-		'typescript',
-		'typescriptreact',
+			'javascript',
+			'javascriptreact',
+			'typescript',
+			'typescriptreact',
 		})
 	end
 }
