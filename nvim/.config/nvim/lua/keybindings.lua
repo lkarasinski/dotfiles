@@ -130,3 +130,12 @@ map('n', '<leader>gk', ':lua require("gitsigns").prev_hunk()<CR>', { desc = "Go 
 --------------
 
 map('n', '<C-n>', ":Navbuddy<CR>", { desc = "Open symbol navigation" })
+
+-----------
+-- flash --
+-----------
+
+map('n', '<C-f>', ":lua require('flash').jump()<CR>", { desc = "Flash" })
+map('x', '<C-f>', ":lua require('flash').jump()<CR>", { desc = "Flash" })
+map('o', '<C-f>', ":lua require('flash').jump()<CR>", { desc = "Flash" })
+
