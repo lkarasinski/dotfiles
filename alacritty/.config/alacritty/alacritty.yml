@@ -5,7 +5,7 @@ window:
     columns: 180
     lines: 55
   decorations: full
-  opacity: 0.5
+  opacity: 1
 font:
   size: 12
   normal:
