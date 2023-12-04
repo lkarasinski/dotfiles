@@ -16,6 +16,14 @@ local servers = {
 			telemetry = { enable = false },
 		},
 	},
+	tailwindcss = {
+		experimental = {
+			classRegex = {
+				{ "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+				{ "cx\\(([^)]*)\\)",  "(?:'|\"|`)([^']*)(?:'|\"|`)" }
+			},
+		},
+	},
 }
 
 -- Ensure the servers above are installed

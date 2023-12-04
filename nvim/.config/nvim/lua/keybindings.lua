@@ -46,22 +46,22 @@ map('n', 'gd', function()
 end, { desc = "Go to definition" })
 
 -- Rename symbol
-map('', '<leader>lr', function()
+map('n', '<leader>lr', function()
 	vim.lsp.buf.rename()
 end, { desc = "Rename symbol", noremap = true, silent = true })
 
 -- Code actions
-map('', '<leader>la', function()
+map('n', '<leader>la', function()
 	vim.lsp.buf.code_action()
 end, { desc = "Code actions", noremap = true, silent = true })
 
 -- Next diagnostic
-map('', '<leader>ln', function()
+map('n', '<leader>ln', function()
 	vim.diagnostic.goto_next()
 end, { desc = "Next diagnostic", noremap = true, silent = true })
 
 -- Previous diagnostic
-map('', '<leader>lp', function()
+map('n', '<leader>lp', function()
 	vim.diagnostic.goto_prev()
 end, { desc = "Previous diagnostic", noremap = true, silent = true })
 
