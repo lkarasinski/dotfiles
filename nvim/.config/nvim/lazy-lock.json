@@ -36,5 +36,6 @@
   "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
   "transparent.nvim": { "branch": "main", "commit": "4cf97fc0b1c4a88cf246b2f6facb735a536a558e" },
   "vim-illuminate": { "branch": "master", "commit": "76f28e858f1caae87bfa45fb4fd09e4b053fc45b" },
+  "vim-wakatime": { "branch": "master", "commit": "cda81ada9a3bf8168e2381c33831e0dd7be9b828" },
   "which-key.nvim": { "branch": "main", "commit": "7ccf476ebe0445a741b64e36c78a682c1c6118b7" }
 }
