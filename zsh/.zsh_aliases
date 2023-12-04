@@ -1,0 +1,1 @@
+alias diff-lines='git diff master | diffstat -s'
