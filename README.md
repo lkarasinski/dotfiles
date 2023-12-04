@@ -1,7 +1,8 @@
 # Dotfiles
 I manage my dotfiles using [stow](https://www.gnu.org/software/stow/).
+> Note: This repo is not perfect, it probably won't "just work", you might have to debug certain things yourself (e.g. install dependencies).
 
-## Requirements
+## Requirements (not up to date)
 To use my dotfiles make sure that you:
 - Have zsh to execute the install script
 - Have stow to create symlinks
@@ -20,20 +21,19 @@ Install tmux plugins with `C-a` + `I`
 # Configs
 
 ## neovim
-My neovim config was recently created and is still in the "testing" phase.
-The plugins might change, as well as keymaps and all the other stuff.
-So far i find the config good enough to use, and I'm using it at work.
+The neovim config is ~80% done. It still lacks certain features, that I would like to implement, but in my opinion it good enough to use it
+as a daily driver. 
 
+### Plugins
+- [`bdelete.nvim`](https://github.com/famiu/bufdelete.nvim) - Helper for deleting buffers, without messing up the layout.
+- [`catppuccin`](https://github.com/catppuccin/nvim) - Colorscheme.
+- [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp) - Completion plugin.
+- [`nvim-colorizer`](https://github.com/norcalli/nvim-colorizer.lua) - Change background of color values to their color.
+- [`comment.nvim`](https://github.com/numToStr/Comment.nvim) - Plugin for smart commenting (Not implemented in 100%, need to add TS support).
+- [`flash.nvim`](https://github.com/folke/flash.nvim) - Plugin that improves the search functionality in neovim.
 
-### Features
-- Autoformatting using lsp-config
-- Buffer management using bufferline and bdelete
-- Comment tool with support for tree-sitter
-- Lazygit git gui
-- neo-tree file tree
-- File and word fuzzy finding with telescope 
-- Undotree and persistent undos
-- Easy lsp installation with Mason
+### Missing features / bugs
+- 
 
 ## zsh
 I use `oh-my-zsh` with some additional plugins like:
