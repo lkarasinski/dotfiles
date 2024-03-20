@@ -24,5 +24,7 @@ return {
 				follow_current_file = true,
 			}
 		})
+		vim.g.loaded_netrwPlugin = 1
+		vim.g.loaded_netrw = 1
 	end
 }
