@@ -14,7 +14,11 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 vim.g.maplocalleader = ","
 
+require("config")
 require("lazy").setup("plugins")
 require("keybindings")
 require("lsp")
-require("config")
+
+if vim.fn.has('nvim') == 1 and vim.fn.executable('nvr') == 1 then
+	vim.env.GIT_EDITOR = "nvr -cc split --remote-wait +'set bufhidden=wipe'"
+end
