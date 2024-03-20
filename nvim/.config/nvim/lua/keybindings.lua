@@ -139,3 +139,8 @@ map('n', '<C-f>', ":lua require('flash').jump()<CR>", { desc = "Flash" })
 map('x', '<C-f>', ":lua require('flash').jump()<CR>", { desc = "Flash" })
 map('o', '<C-f>', ":lua require('flash').jump()<CR>", { desc = "Flash" })
 
+-----------
+-- tabby --
+-----------
+vim.g.tabby_keybinding_accept = '<C-Tab>'
+vim.g.tabby_keybinding_reject = '<Tab>'
