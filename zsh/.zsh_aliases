@@ -1,1 +1,3 @@
 alias diff-lines='git diff master | diffstat -s'
+alias grc='git add . && git rebase --continue'
+alias vim='nvim --listen /tmp/nvim-server.pipe'
