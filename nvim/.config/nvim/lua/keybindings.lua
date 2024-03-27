@@ -97,6 +97,8 @@ map('n', '<leader>ff', ':Telescope find_files<CR>', { desc = "Find files" })
 map('n', '<leader>u', '<cmd>Telescope undo<cr>', { desc = "Undo Tree" })
 map('n', '<leader>fw', ':Telescope live_grep<CR>', { desc = "Find word" })
 map('n', '<leader>fb', ':Telescope buffers<CR>', { desc = "Find buffers" })
+map('n', '<leader>ft', ':lua require("telescope").extensions.git_worktree.git_worktrees()<CR>', { desc = "View worktrees" })
+
 
 -----------
 -- Neorg --
