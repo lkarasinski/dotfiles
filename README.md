@@ -1,3 +1,6 @@
+> [!WARNING]  
+> Unmaintained repository. Since I switched to NixOS, i no longer update my dotfiles in this repository.
+
 # Dotfiles
 I manage my dotfiles using [stow](https://www.gnu.org/software/stow/).
 > Note: This repo is not perfect, it probably won't "just work", you might have to debug certain things yourself (e.g. install dependencies).
